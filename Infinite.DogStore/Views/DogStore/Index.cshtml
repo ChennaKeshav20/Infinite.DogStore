@@ -1,0 +1,28 @@
+﻿@model List<Infinite.DogStore.Models.Pet>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Pets</h2>
+<hr />
+@*@Html.ActionLink("Add new", "Create", "Dogstores")*@
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <td>Id</td>
+                <td>PetName</td>
+
+            </tr>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.PetName</td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
